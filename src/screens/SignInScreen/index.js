@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 import logo from '../../../assets/images/Logo_1.png';
-import CustomButton from '../../components/CustomButtom';
+import CustomButton from '../../components/CustomButton';
 import CustomInput from '../../components/CustomInputs';
 import SocialSignInButtons from '../../components/SocialSignInButtons';
 import { styles } from './styles';

@@ -1,14 +1,7 @@
 import { useState } from 'react';
-import {
-  View,
-  Text,
-  Image,
-  useWindowDimensions,
-  ScrollView
-} from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 
-import logo from '../../../assets/images/Logo_1.png';
-import CustomButton from '../../components/CustomButtom';
+import CustomButton from '../../components/CustomButton';
 import CustomInput from '../../components/CustomInputs';
 import SocialSignInButtons from '../../components/SocialSignInButtons';
 import { styles } from './styles';
@@ -18,8 +11,6 @@ export default function SignUpScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
-
-  const { height } = useWindowDimensions();
 
   const onRegisterPressed = () => console.warn('sign in');
   const onSignInPressed = () => console.warn('signup');
