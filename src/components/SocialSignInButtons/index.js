@@ -1,5 +1,5 @@
 import { View, Text } from 'react-native';
-import CustomButton from '../CustomButtom';
+import CustomButton from '../CustomButton';
 
 export default function SocialSignInButtons() {
   const onSignInWithApple = () => console.warn('sign in apple');
