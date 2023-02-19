@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { View, Text, ScrollView } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import CustomButton from '../../components/CustomButton';
 import CustomInput from '../../components/CustomInputs';
@@ -12,10 +13,24 @@ export default function SignUpScreen() {
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
 
-  const onRegisterPressed = () => console.warn('sign in');
-  const onSignInPressed = () => console.warn('signup');
-  const onTermsPressed = () => console.warn('terms of use');
-  const onPrivacyPressed = () => console.warn('privacy policy');
+  const navigation = useNavigation();
+
+  // Events Handlers =========
+  const onRegisterPressed = () => {
+    navigation.navigate('ConfirmEmail');
+  };
+
+  const onSignInPressed = () => {
+    navigation.navigate('SignIn');
+  };
+  const onTermsPressed = () => {
+    //TODO: Create page and add page to navigation
+    navigation.navigate('TermsOfUse');
+  };
+  const onPrivacyPressed = () => {
+    //TODO: Create page and add page to navigation
+    navigation.navigate("PrivacyPolicy'");
+  };
 
   return (
     <ScrollView showsVerticalScrollIndicator="false">

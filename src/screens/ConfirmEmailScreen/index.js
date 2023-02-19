@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
 import { View, Text, ScrollView } from 'react-native';
 
@@ -8,8 +9,10 @@ import { styles } from './styles';
 export default function ConfirmEmailScreen() {
   const [code, setCode] = useState('');
 
-  const onConfirmPressed = () => console.warn('confirm code');
-  const onBackToSignInPressed = () => console.warn('back to sign in');
+  const navigation = useNavigation();
+
+  const onConfirmPressed = () => navigation.navigate('Home');
+  const onBackToSignInPressed = () => navigation.navigate('SignIn');
   const onResendCode = () => console.warn('resend code');
 
   return (
